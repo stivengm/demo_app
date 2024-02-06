@@ -16,9 +16,9 @@ class HomeView extends StatelessWidget {
           children: [
             PrimaryButton(text: 'CHAT', onPressed: () => chat()),
             const SizedBox(height: 15.0),
-            PrimaryButton(text: 'VÍDEO CHAT', onPressed: () => chat()),
+            PrimaryButton(text: 'VÍDEO CHAT', onPressed: () => videoChat(context)),
             const SizedBox(height: 15.0),
-            PrimaryButton(text: 'AGENDAR CITA', onPressed: () => chat())
+            PrimaryButton(text: 'AGENDAR CITA', onPressed: () => agendarCita())
           ],
         ),
       ),
@@ -30,8 +30,9 @@ class HomeView extends StatelessWidget {
     print("CHAT!");
   }
 
-  videoChat() {
+  videoChat(BuildContext context) {
     print("VÍDEO CHAT!");
+    Navigator.pushNamed(context, 'videoChat');
   }
 
   agendarCita() {
