@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:demo_app/ui/views/home_view/home_view.dart';
+import 'package:demo_app/core/paths/app_paths.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeView()
+      routes: routesApp(),
+      initialRoute: 'home',
     );
   }
 }
