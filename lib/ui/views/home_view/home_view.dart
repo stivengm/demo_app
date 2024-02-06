@@ -14,11 +14,11 @@ class HomeView extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           children: [
-            PrimaryButton(text: 'CHAT', onPressed: chat()),
+            PrimaryButton(text: 'CHAT', onPressed: () => chat()),
             const SizedBox(height: 15.0),
-            PrimaryButton(text: 'VÍDEO CHAT', onPressed: chat()),
+            PrimaryButton(text: 'VÍDEO CHAT', onPressed: () => chat()),
             const SizedBox(height: 15.0),
-            PrimaryButton(text: 'AGENDAR CITA', onPressed: chat())
+            PrimaryButton(text: 'AGENDAR CITA', onPressed: () => chat())
           ],
         ),
       ),
