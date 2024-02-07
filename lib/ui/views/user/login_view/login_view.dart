@@ -99,7 +99,7 @@ class _LoginViewState extends State<LoginView> {
                         const SizedBox(height: 30.0),
                         SizedBox(
                           width: media.width * .7,
-                          child: PrimaryButton(text: 'Iniciar sesión', onPressed: () => {},),
+                          child: PrimaryButton(text: 'Iniciar sesión', onPressed: () => login()),
                         )
                       ],
                     ),
@@ -112,4 +112,9 @@ class _LoginViewState extends State<LoginView> {
       ),
     );
   }
+
+  login() {
+    Navigator.pushNamed(context, 'home');
+  }
+
 }
